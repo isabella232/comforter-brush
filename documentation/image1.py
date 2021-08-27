@@ -12,14 +12,14 @@ parser.add_argument('--output', metavar="PNG",
                     help='where to write the PNG file')
 args = parser.parse_args()
 
-FONT_PATH = "fonts/ttf/Rubik-Regular.ttf"
+FONT_PATH = "../fonts/ttf/ComforterBrush-Regular.ttf"
 
 # CONSTANTS
-WIDTH, HEIGHT, MARGIN, FRAMES = 2048, 2048, 128, 1
-BIG_TEXT = "Aa"
+WIDTH, HEIGHT, MARGIN, FRAMES = 4600, 1200, 80, 1
+BIG_TEXT = "Comforter Brush"
 
 AUXILIARY_FONT = "Helvetica"
-AUXILIARY_FONT_SIZE = 48
+AUXILIARY_FONT_SIZE = 20
 
 # Constants we will work out dynamically
 MY_URL = subprocess.check_output("git remote get-url origin", shell=True).decode()
