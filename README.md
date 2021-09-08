@@ -1,50 +1,39 @@
 # Comforter Brush
 
-[![][Fontbakery]](https://googlefonts.github.io/comforter-brush/fontbakery-report.html)
-[![][Universal]](https://googlefonts.github.io/comforter-brush/fontbakery-report.html)
-[![][GF Profile]](https://googlefonts.github.io/comforter-brush/fontbakery-report.html)
-[![][Outline Correctness]](https://googlefonts.github.io/comforter-brush/fontbakery-report.html)
-[![][Shaping]](https://googlefonts.github.io/comforter-brush/fontbakery-report.html)
-
-[Fontbakery]: https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgooglefonts%2Fcomforter-brush%2Fgh-pages%2Fbadges%2Foverall.json
-[GF Profile]: https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgooglefonts%2Fcomforter-brush%2Fgh-pages%2Fbadges%2FGoogleFonts.json
-[Outline Correctness]: https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgooglefonts%2Fcomforter-brush%2Fgh-pages%2Fbadges%2FOutlineCorrectnessChecks.json
-[Shaping]: https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgooglefonts%2Fcomforter-brush%2Fgh-pages%2Fbadges%2FShapingChecks.json
-[Universal]: https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgooglefonts%2Fcomforter-brush%2Fgh-pages%2Fbadges%2FUniversal.json
-
 Comforter Brush is the "brushy" companion of Comforter, a bouncy, upright brush style script a contemporary, and non- traditional script font.
 
-![Sample Image](documentation/image1.png)
+It comes with Latin Character sets including Western, Central, and Vietnamese language support.
 
+## Building the Fonts
 
-## Building
+The font is built using fontmake and gftools post processing script. Tools are all python based, so it must be previously installed.
 
-Fonts are built automatically by GitHub Actions - take a look in the "Actions" tab for the latest build.
+To install all the Python tools into a virtualenv, do the following:
 
-If you want to build fonts manually on your own computer:
+From terminal:
 
-* `make build` will produce font files.
-* `make test` will run [FontBakery](https://github.com/googlefonts/fontbakery)'s quality assurance tests.
-* `make proof` will generate HTML proof files.
+```
 
-The proof files and QA tests are also available automatically via GitHub Actions - look at `https://yourname.github.io/your-font-repository-name`.
+cd your/local/project/directory
 
-## Changelog
+#once in the project folder create a virtual environment. 
+This step has to be done just once, the first time:
 
-When you update your font (new version or new release), please report all notable changes here, with a date.
-[Font Versioning](https://github.com/googlefonts/gf-docs/tree/main/Spec#font-versioning) is based on semver. 
-Changelog example:
+python3 -m venv venv
 
-**26 May 2021. Version 2.13**
-- MAJOR Font turned to a variable font.
-- SIGNIFICANT New Stylistic sets added.
+#activate the virtual environment
 
-## License
+source venv/bin/activate
 
-This Font Software is licensed under the SIL Open Font License, Version 1.1.
-This license is copied below, and is also available with a FAQ at
-https://scripts.sil.org/OFL
+#install the required dependencies
 
-## Repository Layout
+pip install -r requirements.txt
 
-This font repository structure is inspired by [Unified Font Repository v0.3](https://github.com/unified-font-repository/Unified-Font-Repository), modified for the Google Fonts workflow.
+```
+
+Then run the this command:
+
+```
+cd sources
+gftools builder config.yml
+```
