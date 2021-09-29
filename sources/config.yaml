@@ -2,4 +2,4 @@ sources:
   - ComforterBrush-Pro.glyphs
 familyName: "Comforter Brush"
 buildVariable: false
-# autohintTTF: false
+autohintTTF: false
