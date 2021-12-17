@@ -4,6 +4,8 @@ Comforter Brush is the "brushy" companion of Comforter, a bouncy, upright brush 
 
 It comes with Latin Character sets including Western, Central, and Vietnamese language support.
 
+![Sample Image](documentation/image1.png)
+
 ## Building the Fonts
 
 The font is built using fontmake and gftools post processing script. Tools are all python based, so it must be previously installed.
